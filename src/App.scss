@@ -1,0 +1,44 @@
+.app-container {
+  max-width: 1320px;
+  margin: 0 auto;
+
+  .cv-container {
+    min-height: 100vh;
+    margin-top: 130px;
+    display: flex;
+    @media (max-width: 1300px) {
+      display: block;
+    }
+
+    aside {
+      flex: 0 0 400px;
+      max-width: 400px;
+      background-color: #1b4da1;
+      color: white;
+
+      & > div {
+        margin-top: 150px;
+        width: 400px;
+        z-index: 1;
+
+        .ui.sticky {
+          z-index: 1;
+          padding: 0px 40px;
+        }
+      }
+
+      @media (max-width: 1300px) {
+        display: none;
+      }
+
+      .ui.header {
+        color: white;
+      }
+    }
+
+    section {
+      flex: 1 0 auto;
+      margin-top: 130px;
+    }
+  }
+}
