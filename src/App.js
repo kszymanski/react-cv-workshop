@@ -4,8 +4,40 @@ import { Sticky } from "semantic-ui-react";
 import DynamicHeader from "./headers/DynamicHeader";
 import Bio from "./blocks/Bio";
 import PersonalDetails from './blocks/PersonalDetails';
+import Timeline from './blocks/Timeline';
 
 import "./App.scss";
+
+const myDetails = {
+  experience: [
+    {
+      title: "Future Processing sp z o.o.",
+      description: "Inżynier Oprogramowania",
+      from: "06.2012",
+      to: "present"
+    },
+    {
+      title: "De Ygrek s.c.",
+      description: "Kierownik działu IT",
+      from: "09.2006",
+      to: "05.2012"
+    }
+  ],
+  education: [
+    {
+      title: "Future Processing sp z o.o.",
+      description: "Inżynier Oprogramowania",
+      from: "06.2012",
+      to: "present"
+    },
+    {
+      title: "De Ygrek s.c.",
+      description: "Kierownik działu IT",
+      from: "09.2006",
+      to: "05.2012"
+    }
+  ]
+}
 
 class App extends Component {
   state = {};
@@ -40,6 +72,8 @@ class App extends Component {
                 dzisiejszy Angular 2+, zdradzając go czasem dla Reacta.
               </p>
             </Bio>
+            <Timeline header="Doświadczenie" items={myDetails.experience} />
+            <Timeline header="Edukacja" items={myDetails.education} />
           </section>
         </div>
       </div>
