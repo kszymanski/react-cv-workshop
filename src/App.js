@@ -5,6 +5,7 @@ import DynamicHeader from "./headers/DynamicHeader";
 import Bio from "./blocks/Bio";
 import PersonalDetails from './blocks/PersonalDetails';
 import Timeline from './blocks/Timeline';
+import ProjectList from './components/ProjectList';
 
 import "./App.scss";
 
@@ -74,6 +75,7 @@ class App extends Component {
             </Bio>
             <Timeline header="Doświadczenie" items={myDetails.experience} />
             <Timeline header="Edukacja" items={myDetails.education} />
+            <ProjectList githubAccountName="tomdepta"/>
           </section>
         </div>
       </div>

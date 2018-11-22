@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Header, Grid } from "semantic-ui-react";
 
+import SectionHeader from './SectionHeader';
 import "./Timeline.scss";
 
 const Timeline = ({ header, items }) => (
   <Container text className="timeline">
-    <Header as="h3" dividing>
+    <SectionHeader>
       {header}
-    </Header>
+    </SectionHeader>
     <Grid columns={2}>
       {items.map((item, index) => (
         <Grid.Row key={index}>
