@@ -3,6 +3,7 @@ import { Sticky } from "semantic-ui-react";
 
 import DynamicHeader from "./headers/DynamicHeader";
 import Bio from "./blocks/Bio";
+import PersonalDetails from './blocks/PersonalDetails';
 
 import "./App.scss";
 
@@ -23,9 +24,7 @@ class App extends Component {
           <aside>
             <div>
               <Sticky context={contextRef} pushing offset={150}>
-                {
-                  // Left pane
-                }
+                <PersonalDetails />
               </Sticky>
             </div>
           </aside>

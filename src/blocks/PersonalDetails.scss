@@ -1,0 +1,19 @@
+.personal-details {
+  .ui {
+    &.header {
+      &.block {
+        background: #082a65;
+      }
+    }
+    &.list {
+      padding: 0px 40px;
+      .item {
+        font-size: 1.4em;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
