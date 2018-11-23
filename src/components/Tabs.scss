@@ -1,5 +1,10 @@
 .tabs{
     margin-top: 35px;
+    .ui.list>.item .header {
+        color: white;
+        padding-bottom: 5px;
+    }
+    
     .tabs-headers{
         display: flex;
         border-bottom: 1px solid white;
@@ -14,6 +19,7 @@
             padding: 3px;
             background-color: #082a65;
             transition: all 0.3s ease-in;
+            cursor: pointer;
             &.active {
                 position: relative;
                 background-color: #1b4da1;

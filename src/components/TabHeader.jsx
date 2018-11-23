@@ -7,7 +7,7 @@ class TabHeader extends Component {
 
   render() {
     const { children, active } = this.props;
-    return <div className={active ? 'active': ''} onClick={this.headerClicked}>{children}</div>;
+    return <div className={active ? 'active' : ''} onClick={this.headerClicked}>{children}</div>;
   }
 }
 export default TabHeader;

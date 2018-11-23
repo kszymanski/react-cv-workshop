@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Rating, List, Divider } from "semantic-ui-react";
+import { Rating, List, Divider, Progress } from "semantic-ui-react";
 
 import TabHeader from "./TabHeader";
 import TabContent from "../blocks/TabContent";
@@ -37,20 +37,62 @@ class Tabs extends Component {
         </div>
         <TabContent active={activeIndex === 0}>
           <List>
-            <List.Item>
-              <List.Content>
-                <List.Header as='h5'>Angielski</List.Header>
-                <List.Description>
-                  <Rating maxRating={5} rating={3} icon="star" disabled />
-                </List.Description>
-              </List.Content>
-            </List.Item>
+            {tabContent.languages.map(lang => (
+              <List.Item>
+                <List.Content>
+                  <List.Header as="h5">{lang.name}</List.Header>
+                  <List.Description>
+                    <Progress value={lang.rating} total={5} progress="ratio" />
+                  </List.Description>
+                </List.Content>
+              </List.Item>
+            ))}
           </List>
         </TabContent>
-        <TabContent active={activeIndex === 1}>inne</TabContent>
+        <TabContent active={activeIndex === 1}>
+          <List>
+            {tabContent.otherSkills.map(lang => (
+              <List.Item>
+                <List.Content>
+                  <List.Header as="h5">{lang.name}</List.Header>
+                  <List.Description>
+                    <Progress value={lang.rating} total={5} progress="ratio" />
+                  </List.Description>
+                </List.Content>
+              </List.Item>
+            ))}
+          </List>
+        </TabContent>
       </div>
     );
   }
 }
+
+const tabContent = {
+  languages: [
+    {
+      name: "Angielski",
+      rating: "4"
+    },
+    {
+      name: "Niemiecki",
+      rating: "3"
+    }
+  ],
+  otherSkills: [
+    {
+      name: "C#",
+      rating: 4
+    },
+    {
+      name: "JavaScript",
+      rating: 3
+    },
+    {
+      name: "OOP",
+      rating: 5
+    }
+  ]
+};
 
 export default Tabs;
