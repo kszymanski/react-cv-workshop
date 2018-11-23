@@ -1,0 +1,32 @@
+.tabs{
+    margin-top: 35px;
+    .tabs-headers{
+        display: flex;
+        border-bottom: 1px solid white;
+        & > div {
+            flex: 1 0;
+            margin: 0 5px;
+            text-align: center;
+            border: 1px solid white;
+            border-bottom: none;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 3px;
+            background-color: #082a65;
+            transition: all 0.3s ease-in;
+            &.active {
+                position: relative;
+                background-color: #1b4da1;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #1b4da1;
+                }
+            }
+        }
+    }
+}

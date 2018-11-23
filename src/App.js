@@ -6,6 +6,7 @@ import Bio from "./blocks/Bio";
 import PersonalDetails from './blocks/PersonalDetails';
 import Timeline from './blocks/Timeline';
 import ProjectList from './components/ProjectList';
+import Tabs from './components/Tabs';
 
 import "./App.scss";
 
@@ -58,6 +59,7 @@ class App extends Component {
             <div>
               <Sticky context={contextRef} pushing offset={150}>
                 <PersonalDetails />
+                <Tabs />
               </Sticky>
             </div>
           </aside>
